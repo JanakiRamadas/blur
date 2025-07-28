@@ -92,5 +92,11 @@ def analyze_image_api():
         app.logger.warning(f"Disallowed file type for filename: {file.filename}")
         return jsonify({"error": "Allowed file types are png, jpg, jpeg, gif"}), 400
 
+@app.route('/ping') # Choose a unique, simple path like /ping or /health
+def health_check():
+    return "OK", 200 # Returns "OK" with a 200 OK status code
+    # return "Success", 200 # Another option
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)

@@ -6,7 +6,7 @@ import json # Import json for pretty printing in case of non-json errors
 API_URL = "https://blur-d6ed.onrender.com/api/analyze_image"
 
 # Path to the image file you want to send
-IMAGE_FILE_PATH = "clear1.png" # Make sure this matches your file
+IMAGE_FILE_PATH = "blurry1.png" # Make sure this matches your file
 
 def test_upload_image():
     if not os.path.exists(IMAGE_FILE_PATH):
